@@ -23,6 +23,6 @@ jobs:
         run: |
           mvn compile jib:build \
             -Dimage=ghcr.io/alejo17091/microservicio1 \
-            -Djib.to.auth.username=${{ secrets.GHCR_USERNAME }} \
+            -Djib.to.auth.username=${{ secrets.GHRC_USERNAME }} \
             -Djib.to.auth.password=${{ secrets.GHCR_TOKEN }}
 
