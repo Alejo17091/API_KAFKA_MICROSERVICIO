@@ -22,7 +22,7 @@ jobs:
       - name: Build and push image with Jib
         run: |
           mvn compile jib:build \
-            -Dimage=ghcr.io/alejo17091/microservicio1 \
+            -Dimage=ghcr.io/Alejo17091/microservicio1 \
             -Djib.to.auth.username=${{ secrets.GHCR_USERNAME }} \
             -Djib.to.auth.password=${{ secrets.GHCR_TOKEN }}
 
