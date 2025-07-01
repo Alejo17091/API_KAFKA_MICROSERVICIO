@@ -18,11 +18,11 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-# update user
+# update user2
       - name: Build and push image with Jib
         run: |
           mvn compile jib:build \
-            -Dimage=ghcr.io/Alejo17091/microservicio1 \
+            -Dimage=ghcr.io/alejo17091/microservicio1 \
             -Djib.to.auth.username=${{ secrets.GHCR_USERNAME }} \
             -Djib.to.auth.password=${{ secrets.GHCR_TOKEN }}
 
