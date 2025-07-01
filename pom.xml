@@ -28,6 +28,7 @@
 	</scm>
 	<properties>
 		<java.version>17</java.version>
+		<start-class>com.example.microservicio1.Microservicio1Application</start-class>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -94,9 +95,19 @@
       <artifactId>jib-maven-plugin</artifactId>
       <version>3.4.0</version>
 	  <configuration>
+	   <from>
+                    <image>eclipse-temurin:17-jre</image>
+                </from>
     <to>
       <image>ghcr.io/alejo17091/microservicio1</image>
+	   <auth>
+                        <username>${env.GHCR_USERNAME}</username>
+                        <password>${env.GHCR_TOKEN}</password>
+                    </auth>
     </to>
+	<container>
+                    <mainClass>${start-class}</mainClass>
+                </container>
   </configuration>
     </plugin>
 		</plugins>
