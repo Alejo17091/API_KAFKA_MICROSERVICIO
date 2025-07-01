@@ -1,0 +1,11 @@
+# Configuración de Spring Kafka
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092  # Dirección del servidor Kafka
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+# Puerto donde correrá tu aplicación
+server:
+  port: 8080
